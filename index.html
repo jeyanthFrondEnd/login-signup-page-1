@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in and sign up</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="total-page">
+        <div class="form-page">
+            <div class="scroller" id="scroller">
+
+                <div class="parant-form">
+                    <div class="sign-in">
+                        <h1>Sign in</h1>
+                        <form class="sign-in" style="padding-top: 30px;">
+                            <div class="input-field">
+                                <label for="email">email</label>
+                                <input type="email" id="email">
+                            </div>
+                            <div class="input-field">
+                                <label for="password">Password</label>
+                                <input type="password" id="password">
+                            </div>
+                            <div class="input-check">
+                                <input type="checkbox" id="check-sign-in">
+                                <label for="check-sign-in">Show password</label>
+                            </div>
+                            <button>Sign in</button>
+                        </form>
+                    </div>
+                    <button class="sign-up" id="sign-up-open">Sign up</button>
+                </div>
+                <div class="parant-form">
+                    <div class="sign-up">
+                        <h1>Sign up</h1>
+                        <form class="sign-up">
+                            <div class="input-field">
+                                <label for="sign-email">email</label>
+                                <input type="email" id="sign-email">
+                            </div>
+                            <div class="input-field">
+                                <label for="sign-password">create password</label>
+                                <input type="password" id="sign-password">
+                            </div>
+                            <div class="input-field">
+                                <label for="confirm_password">Confirm password</label>
+                                <input type="password" id="confirm_password">
+                            </div>
+                            <div class="input-check">
+                                <input type="checkbox" id="check">
+                                <label for="check">Show password</label>
+                            </div>
+                            <button>Sign up</button>
+                        </form>
+                    </div>
+                    <button class="sign-up" id="sign-in-open">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var signInOpen = document.getElementById('sign-in-open')
+        var signUpOpen = document.getElementById('sign-up-open')
+        var scroller = document.getElementById('scroller')
+        signInOpen.addEventListener('click', () => {
+            scroller.style.transform = "translateY(0px)"
+        })
+        signUpOpen.addEventListener('click', () => {
+            scroller.style.transform = "translateY(-450px)"
+        })
+    </script>
+</body>
+
+</html>
